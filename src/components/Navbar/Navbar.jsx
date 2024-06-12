@@ -1,8 +1,42 @@
 import React from "react";
 import Logo from "../../assets/red-tie.png";
 import { IoMdSearch } from "react-icons/io";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
+
+const Menu = [
+  {
+    id: 1,
+    name: "Home",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Top Rated",
+    link: "/#services",
+  },
+  {
+    id: 3,
+    name: "Wedding",
+    link: "/#",
+  },
+  {
+    id: 4,
+    name: "Tailor Made",
+    link: "/#",
+  },
+  {
+    id: 5,
+    name: "Tuxedo",
+    link: "/#",
+  },
+];
+
+const DropdownLinks = [
+  { id: 1, name: "Trending Suits", link: "/#" },
+  { id: 2, name: "Best Selling", link: "/#" },
+  { id: 3, name: "Top Rated", link: "/#" },
+];
 
 const Navbar = () => {
   return (
@@ -49,7 +83,46 @@ const Navbar = () => {
         </div>
 
         {/* lower navbar  */}
-        <div></div>
+        <div className="flex justify-center dark:bg-white bg-gray-200 shadow-sm shadow-gray-200">
+          <ul className="sm:flex hidden items-center gap-4">
+            {Menu.map((data) => (
+              <li key={data.id}>
+                <a
+                  href={data.link}
+                  className="inline-block px-4 font-bold  hover:text-red-700 hover:font-bold duration-200"
+                >
+                  {" "}
+                  {data.name}{" "}
+                </a>
+              </li>
+            ))}
+            <li className="group relative cursor-pointer">
+              <a
+                href="#"
+                className="flex items-center gap-[2px ] py-2 font-bold hover:text-red-700 hover:font-bold"
+              >
+                Trending{" "}
+                <span>
+                  <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+                </span>
+              </a>
+              <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md dark:bg-primary dark:text-white dark:hover:bg-white dark:hover:text-primary bg-white p-2 text-primary ">
+                <ul>
+                  {DropdownLinks.map((data) => (
+                    <li key={data.id}>
+                      <a
+                        href={data.link}
+                        className="inline-block w-full rounded-md p-2 hover:bg-primary hover:text-white"
+                      >
+                        {data.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
