@@ -42,7 +42,7 @@ const Hero = () => {
     pauseOnFocus: true,
   };
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-white flex justify-center items-center dark:bg-gray-100  dark:text-white duration-200 ">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-white flex justify-center items-center dark:bg-gray-300  dark:text-white duration-200 ">
       {/* bg */}
       <div className="h-[700px] w-[700px] dark:bg-gray-500 bg-gray-400/40 absolute  -top-[110%] -left-[150px] rounded-3xl rotate-45 -z-9 "></div>
       {/* hero */}

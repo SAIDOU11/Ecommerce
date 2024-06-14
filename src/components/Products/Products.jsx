@@ -50,16 +50,16 @@ const ProductsData = [
 
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
-      <div className="container">
+    <div className="mt-14 mb-12 ">
+      <div className="container ">
         {/* 1 */}
 
         <div className="text-center mb-10 max-w-[600px] mx-auto ">
-          <p data-aos="fade-up" className="text-sm text-primary ">
-            Top Selling Products
+          <p data-aos="fade-up" className="text-sm text-blue-900 ">
+            Top Selling Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Products
+            Top Selling Products
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400 ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit

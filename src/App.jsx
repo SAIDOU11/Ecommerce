@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Products";
+import BestProducts from "./components/BestProducts/BestProducts";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,10 +17,11 @@ const App = () => {
     AOS.refresh();
   }, []);
   return (
-    <div>
+    <div className="dark:bg-gray-300">
       <Navbar />
       <Hero />
       <Products />
+      <BestProducts />
     </div>
   );
 };
