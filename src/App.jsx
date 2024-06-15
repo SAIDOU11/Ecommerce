@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Products";
 import BestProducts from "./components/BestProducts/BestProducts";
 import Banner from "./components/Banner/Banner";
+import Subscription from "./components/Subscription/Subscription";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -21,9 +22,10 @@ const App = () => {
     <div className="dark:bg-gray-300">
       <Navbar />
       <Hero />
-      <Products />
       <BestProducts />
       <Banner />
+      <Subscription />
+      <Products />
     </div>
   );
 };
