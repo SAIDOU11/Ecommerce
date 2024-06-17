@@ -99,8 +99,10 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
-                      <p className="text-xs text-gray-500 ">{data.text}</p>
-                      <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      <p className="text-sm text-primary dark:text-gray-300 ">
+                        {data.text}
+                      </p>
+                      <h1 className="text-xl font-bold text-black/80 dark:text-gray-200">
                         {data.name}
                       </h1>
                     </div>

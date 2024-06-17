@@ -8,6 +8,7 @@ import Subscription from "./components/Subscription/Subscription";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -20,7 +21,7 @@ const App = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className="dark:bg-gray-300">
+    <div className="bg-white dark:bg-gray-300 duration-200 ">
       <Navbar />
       <Hero />
       <BestProducts />
@@ -28,6 +29,7 @@ const App = () => {
       <Subscription />
       <Products />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
