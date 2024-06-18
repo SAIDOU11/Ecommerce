@@ -38,9 +38,12 @@ const DropdownLinks = [
   { id: 3, name: "Top Rated", link: "/#" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ handleOrderPopup }) => {
   return (
-    <div className="shadow-md  dark:bg-gray-400 dark:text-black duration-200 relative z-40  ">
+    <div
+      data-aos="zoom-in"
+      className="shadow-md  dark:bg-gray-400 dark:text-black duration-200 relative z-40  "
+    >
       <div>
         {/* upper navbar  */}
         <div className=" text-[#0a1424] py-3  ">
@@ -66,7 +69,7 @@ const Navbar = () => {
               </div>{" "}
               {/* order button*/}
               <button
-                onClick={() => alert("Ordering not available yet.")}
+                onClick={() => handleOrderPopup()}
                 className="bg-[#0a1424]  transition-all duration duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group "
               >
                 <span className="group-hover:block hidden transition-all duration-200">

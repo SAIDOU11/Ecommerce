@@ -28,7 +28,7 @@ const ProductsData = [
   },
 ];
 
-const BestProducts = () => {
+const BestProducts = ({ handleOrderPopup }) => {
   return (
     <div>
       <div className="container">
@@ -74,7 +74,10 @@ const BestProducts = () => {
                 <p className="text-sm text-primary/90 group-hover:text-white duration-200  line-clamp-2 ">
                   {data.description}{" "}
                 </p>
-                <button className="bg-primary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                <button
+                  onClick={handleOrderPopup}
+                  className="bg-primary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                >
                   Order Now
                 </button>
               </div>

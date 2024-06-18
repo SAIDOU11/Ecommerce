@@ -64,7 +64,7 @@ const Footer = () => {
                 <ul>
                   {FooterLinks.map((link) => (
                     <li
-                      className="cursor-pointer  dark:hover:text-gray-800 hover:translate-x-1 duration-200 text-white dark:text-white"
+                      className="cursor-pointer  dark:hover:text-red-500 hover:translate-x-1 duration-200 text-primary hover:text-red-600 dark:text-white"
                       key={link.title}
                     >
                       <span>{link.title}</span>

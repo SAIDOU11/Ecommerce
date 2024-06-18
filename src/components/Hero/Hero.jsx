@@ -28,7 +28,7 @@ const ImageList = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ handleOrderPopup }) => {
   var settings = {
     dots: false,
     arrows: false,
@@ -58,7 +58,10 @@ const Hero = () => {
                   </h1>
                   <p className="text-primary">{data.description}</p>
                   <div>
-                    <button className="bg-gradient-to-r from-red-800 to-red-500 font-bold hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                    <button
+                      onClick={handleOrderPopup}
+                      className="bg-gradient-to-r from-red-800 to-red-500 font-bold hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                    >
                       Order Now
                     </button>
                   </div>
